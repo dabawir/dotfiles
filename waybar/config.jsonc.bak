@@ -1,0 +1,51 @@
+{
+"layer": "top",
+"position": "top",
+"height": 24,
+"modules-left": [
+"custom/nixos",
+"custom/sep_os",
+"hyprland/workspaces",
+"custom/sep_ws"
+],
+"modules-right": [
+"custom/sep_cpu",
+"cpu",
+"custom/sep_net",
+"network",
+"custom/sep_vol",
+"pulseaudio",
+"custom/sep_bat",
+"battery",
+"custom/sep_date",
+"clock#date",
+"custom/sep_time",
+"clock#time"
+],
+"custom/nixos": { "format": "  " },
+"custom/sep_os": { "format": "", "tooltip": false },
+"hyprland/workspaces": { 
+  "format": "{name}", 
+  "on-click": "activate",
+  "persistent-workspaces": { "*": 5 }
+},
+"custom/sep_ws": { "format": "", "tooltip": false },
+"custom/sep_cpu": { "format": "", "tooltip": false },
+"cpu": { "format": "  {usage}% " },
+"custom/sep_net": { "format": "", "tooltip": false },
+"network": { "format-wifi": "  {essid} ", "format-disconnected": "⚠ Down " },
+"custom/sep_vol": { "format": "", "tooltip": false },
+"pulseaudio": { "format": "  {volume}% ", "on-click": "pavucontrol" },
+"custom/sep_bat": { "format": "", "tooltip": false },
+"battery": {
+  "states": { "warning": 30, "critical": 15 },
+  "format": "{icon} {capacity}% ",
+  "format-charging": " {capacity}% ",
+  "format-plugged": " {capacity}% ",
+  "format-icons": ["", "", "", "", ""]
+},
+"custom/sep_date": { "format": "", "tooltip": false },
+"clock#date": { "format": " {:%Y-%m-%d} " },
+"custom/sep_time": { "format": "", "tooltip": false },
+"clock#time": { "format": " {:%H:%M} " }
+}

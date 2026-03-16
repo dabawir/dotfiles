@@ -1,0 +1,43 @@
+-- lua/plugins/lualine.lua
+return {
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    -- Definisi warna abu-abu gradasi
+    local custom_gray = {
+      normal = {
+        a = { bg = '#333333', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#444444', fg = '#cccccc' },
+        c = { bg = '#555555', fg = '#aaaaaa' },
+      },
+      insert = {
+        a = { bg = '#444444', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#555555', fg = '#cccccc' },
+        c = { bg = '#666666', fg = '#aaaaaa' },
+      },
+      visual = {
+        a = { bg = '#555555', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#666666', fg = '#cccccc' },
+        c = { bg = '#777777', fg = '#aaaaaa' },
+      },
+    }
+
+    require('lualine').setup({
+        options = {
+        theme = custom_gray,
+        -- Pakai panah runcing standar
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
+        globalstatus = true,
+        },
+      sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'filetype' }, -- Logo muncul di sini
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
+      }
+    })
+  end
+}

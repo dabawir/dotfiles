@@ -1,0 +1,32 @@
+window#waybar {
+font-family: "JetBrainsMono Nerd Font";
+font-size: 11px;
+background: #0a0a0a;
+}
+window#waybar button {
+font-family: "JetBrainsMono Nerd Font";
+border: none;
+border-radius: 0;
+}
+#custom-nixos { background: #3c3c3c; color: #ffffff; padding: 0 5px; }
+#custom-sep_os { background: #282828; color: #3c3c3c; font-size: 22px; }
+#workspaces { background: #282828; color: #888888; padding: 0 5px; }
+#workspaces button { color: #888888; padding: 0 6px; border-bottom: 2px solid transparent; }
+#workspaces button.active { color: #ffffff; border-bottom: 2px solid #ffffff; }
+#custom-sep_ws { background: #0a0a0a; color: #282828; font-size: 22px; }
+#custom-sep_cpu { background: #0a0a0a; color: #141414; font-size: 22px; }
+#cpu { background: #141414; color: #dddddd; padding: 0; }
+#custom-sep_net { background: #141414; color: #1e1e1e; font-size: 22px; }
+#network { background: #1e1e1e; color: #dddddd; padding: 0; }
+#custom-sep_vol { background: #1e1e1e; color: #282828; font-size: 22px; }
+#pulseaudio { background: #282828; color: #dddddd; padding: 0; }
+#custom-sep_bat { background: #282828; color: #323232; font-size: 22px; }
+#battery { background: #323232; color: #dddddd; padding: 0; }
+#battery.warning { color: #ffaa00; }
+#battery.critical { color: #ff5555; }
+#custom-sep_date { background: #323232; color: #3c3c3c; font-size: 22px; }
+#clock.date { background: #3c3c3c; color: #dddddd; padding: 0; }
+#custom-sep_time { background: #3c3c3c; color: #464646; font-size: 22px; }
+#clock.time { background: #464646; color: #ffffff; padding-right: 10px; }
+tooltip { background: #1a1a1a; border: 1px solid #333333; }
+tooltip label { color: #ffffff; }
